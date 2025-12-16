@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { ArrowUp, Github, Linkedin, Twitter, Instagram, Mail } from "lucide-react";
+import { ArrowUp, Github, Linkedin, Instagram, Mail, Phone } from "lucide-react";
 
 const Footer = () => {
   // Scroll to top function
@@ -12,10 +12,11 @@ const Footer = () => {
   };
 
   const socialLinks = [
-    { icon: <Github size={20} />, href: "#" },
-    { icon: <Linkedin size={20} />, href: "#" },
-    { icon: <Twitter size={20} />, href: "#" },
-    { icon: <Instagram size={20} />, href: "#" },
+    { icon: <Github size={20} />, href: "https://github.com/Karann2002"},
+    { icon: <Linkedin size={20} />, href: "https://www.linkedin.com/in/karan-kushwah-6848b3250/" },
+    { icon: <Instagram size={20} />, href: "https://www.instagram.com/karan___kushwah/?hl=en" },
+    { icon: <Phone size={20} />, href: "https://www.instagram.com/karan___kushwah/?hl=en" },
+
   ];
 
   const navLinks = ["Home", "About", "Projects", "Services", "Blog"];
@@ -32,7 +33,7 @@ const Footer = () => {
             <div className="flex items-center gap-3">
               <img
                 className="w-12 h-12 rounded-full object-cover border-2 border-gray-700"
-                src="./the.shadoows-20251109-0007.jpg"
+                src="MyImage.png"
                 alt="Profile"
               />
               <span className="text-2xl font-bold tracking-tight">Karan Kushwah</span>
@@ -82,12 +83,12 @@ const Footer = () => {
         </div>
 
         {/* Divider */}
-        <div className="h-px w-full bg-gray-800 mb-8"></div>
+        <div className="h-px w-full bg-white mb-8"></div>
 
         {/* Bottom Section: Copyright & Back to Top */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-5">
           <p className="text-gray-500 text-sm">
-            © {new Date().getFullYear()} Karan Kushwah. All rights reserved.
+            {/* © {new Date().getFullYear()} Karan Kushwah. All rights reserved. */}
           </p>
 
           <motion.button

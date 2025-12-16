@@ -70,7 +70,7 @@ const LandingPage = () => {
         transition={{ delay: 1.2, duration: 0.8 }}
         className="text-gray-400 text-lg md:text-xl text-center max-w-lg"
       >
-        I'm a Frontend Engineer crafting high-performance digital experiences.
+        I'm a Full Stack Developer Engineer crafting high-performance digital experiences.
       </motion.p>
 
       {/* Call to Action Button */}

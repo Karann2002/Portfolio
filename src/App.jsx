@@ -13,7 +13,6 @@ function App() {
   const [showLanding, setShowLanding] = useState(true);
 
   useEffect(() => {
-    // Hide the splash screen after 2.5 seconds (adjust based on your LandingPage animation duration)
     const timer = setTimeout(() => setShowLanding(false), 2500);
     return () => clearTimeout(timer);
   }, []);
@@ -36,7 +35,6 @@ function App() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8 }}
           >
-            {/* Main Portfolio Content */}
             <Navbar/>
             <Home/>
             <Footer/>

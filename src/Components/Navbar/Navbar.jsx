@@ -54,10 +54,11 @@ const Navbar = () => {
         >
           <img
             className="w-10 h-10 rounded-full object-cover border border-gray-200"
-            src="./the.shadoows-20251109-0007.jpg"
+            
+            src="MyImage.png"
             alt="Logo"
           />
-          <h1 className={`font-bold text-xl tracking-tight ${scrolled ? "text-black" : "text-black"}`}>
+          <h1 className={`font-bold text-xl tracking-tight ${scrolled ? "text-black" : "text-white"}`}>
             Karan Kushwah
           </h1>
         </div>
@@ -67,11 +68,11 @@ const Navbar = () => {
           {menuItems.map((item, i) => (
             <li
               key={i}
-              className="relative group cursor-pointer text-sm font-medium text-gray-700 hover:text-black"
+              className={`relative group cursor-pointer text-sm font-medium ${scrolled ? "text-black hover:text-black" : "text-white hover:text-white"} `}
               onClick={() => scrollToSection(item.id)}
             >
               {item.name}
-              <span className="absolute left-0 -bottom-1 h-0.5 w-0 bg-black transition-all duration-300 group-hover:w-full"></span>
+              <span className={`absolute left-0 -bottom-1 h-0.5 w-0 ${scrolled ? "text-black hover:text-black bg-black" : "text-white bg-white hover:text-white"}   transition-all duration-300 group-hover:w-full`}></span>
             </li>
           ))}
         </ul>
@@ -80,8 +81,8 @@ const Navbar = () => {
         <div className="hidden md:block">
           <button
             onClick={() => scrollToSection('contact')}
-            className="border-2 border-black rounded-full px-6 py-2 text-sm font-semibold transition-all duration-300 
-            hover:bg-black hover:text-white hover:scale-105 active:scale-95"
+            className={`border-2 border-black rounded-full px-6 py-2 text-sm font-semibold transition-all duration-300 
+            hover:bg-black hover:text-white hover:scale-105 active:scale-95 ${scrolled ? "text-black" : "text-white border-white"}`}
           >
             Contact
           </button>

@@ -1,4 +1,3 @@
-// Animation Variants to be used across components
 export const fadeIn = (direction = "up", delay = 0) => {
   return {
     hidden: {
