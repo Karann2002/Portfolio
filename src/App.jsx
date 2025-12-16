@@ -8,6 +8,7 @@ import Service from "./Components/Hero/Service";
 import Navbar from "./Components/Navbar/Navbar";
 import Footer from "./Components/Footer/Footer"
 import Home from "../Home";
+import ContactWidget from "./Components/Contact/ContactWidget";
 
 function App() {
   const [showLanding, setShowLanding] = useState(true);
@@ -36,6 +37,7 @@ function App() {
             transition={{ duration: 0.8 }}
           >
             <Navbar/>
+            <ContactWidget/>
             <Home/>
             <Footer/>
           </motion.div>

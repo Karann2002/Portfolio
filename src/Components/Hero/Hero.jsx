@@ -1,9 +1,35 @@
-import React from "react";
+import React, { useState } from "react";
 import { Download, Github, Instagram, Linkedin, Mail, ArrowRight, Code2, Database, Globe } from "lucide-react";
 import { motion } from "framer-motion";
 
 const Hero = () => {
-  // Animation Variants
+    const [isOpen, setIsOpen] = useState(false);
+  
+
+  const openResume = () => {
+    window.open("https://drive.google.com/file/d/11OPvoZKlkTbuLB9B0NyIXbsZrwEkWTKj/view?usp=sharing", "_blank");
+  };
+
+  const menuItems = [
+    { name: "Home", id: "home" },
+    { name: "About", id: "about" },
+    { name: "Projects", id: "projects" },
+    // { name: "Blog", id: "blog" }, 
+    { name: "Services", id: "services" }, 
+
+  ];
+
+  const scrollToSection = (id) => {
+  const section = document.getElementById(id);
+  if (!section) return;
+
+  const yOffset = -80; // height of navbar
+  const y =
+    section.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+  window.scrollTo({ top: y, behavior: "smooth" });
+  setIsOpen(false);
+};
   const containerVariants = {
     hidden: { opacity: 0 },
     show: {
@@ -85,6 +111,8 @@ const Hero = () => {
             <motion.button 
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
+                  onClick={() => scrollToSection('projects')}
+
               className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-medium shadow-lg shadow-cyan-500/25 flex items-center gap-2"
             >
               My Projects <ArrowRight size={18} />
@@ -93,6 +121,8 @@ const Hero = () => {
             <motion.button 
               whileHover={{ scale: 1.05, backgroundColor: "rgba(255,255,255,0.1)" }}
               whileTap={{ scale: 0.95 }}
+              onClick={openResume}
+
               className="border border-slate-600 px-8 py-3 rounded-lg text-white font-medium flex items-center gap-2 hover:border-slate-400 transition-colors"
             >
               <Download size={18} /> Resume

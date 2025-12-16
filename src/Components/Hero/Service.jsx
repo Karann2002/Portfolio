@@ -156,7 +156,7 @@ const Service = () => {
                     className={`mt-2 w-full py-4 rounded-xl text-lg font-semibold shadow-lg shadow-cyan-500/20 flex items-center justify-center gap-2 transition-all ${
                         isSending 
                         ? 'bg-slate-700 text-slate-400 cursor-not-allowed' 
-                        : 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white hover:shadow-cyan-500/40'
+                        : 'bg-linear-to-r from-cyan-500 to-blue-600 text-white hover:shadow-cyan-500/40'
                     }`}
                 >
                     {isSending ? (

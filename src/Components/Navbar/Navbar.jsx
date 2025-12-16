@@ -23,16 +23,23 @@ const Navbar = () => {
     { name: "Home", id: "home" },
     { name: "About", id: "about" },
     { name: "Projects", id: "projects" },
-    { name: "Services", id: "services" }, // Updated to match previous component
+    // { name: "Blog", id: "blog" }, 
+    { name: "Services", id: "services" }, 
+
   ];
 
   const scrollToSection = (id) => {
-    const section = document.getElementById(id);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
-      setIsOpen(false); // Close mobile menu after clicking
-    }
-  };
+  const section = document.getElementById(id);
+  if (!section) return;
+
+  const yOffset = -80; // height of navbar
+  const y =
+    section.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+  window.scrollTo({ top: y, behavior: "smooth" });
+  setIsOpen(false);
+};
+
 
   return (
     <motion.nav
@@ -90,7 +97,7 @@ const Navbar = () => {
 
         {/* Mobile Menu Toggle */}
         <div className="md:hidden">
-          <button onClick={() => setIsOpen(!isOpen)} className="text-black p-2">
+          <button onClick={() => setIsOpen(!isOpen)} className={` p-2 ${scrolled ? "text-black" : "text-white "}`}>
             {isOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
         </div>
@@ -118,7 +125,7 @@ const Navbar = () => {
               <li>
                 <button
                   onClick={() => scrollToSection('contact')}
-                  className="bg-black text-white px-8 py-3 rounded-full font-medium"
+                  className=" text-gray-800 px-8 py-3 rounded-full font-medium"
                 >
                   Contact Me
                 </button>
