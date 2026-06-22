@@ -9,6 +9,7 @@ import Navbar from "./Components/Navbar/Navbar";
 import Footer from "./Components/Footer/Footer"
 import Home from "../Home";
 import ContactWidget from "./Components/Contact/ContactWidget";
+import Test from "./Components/Test";
 
 function App() {
   const [showLanding, setShowLanding] = useState(true);
@@ -19,6 +20,7 @@ function App() {
   }, []);
 
   return (
+    // <Test/>
     <div className="font-sans">
       <AnimatePresence mode="wait">
         {showLanding ? (
@@ -35,7 +37,7 @@ function App() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8 }}
-          >
+          > 
             <Navbar/>
             <ContactWidget/>
             <Home/>

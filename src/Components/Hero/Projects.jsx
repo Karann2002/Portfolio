@@ -21,10 +21,23 @@ const Projects = () => {
   // Sample Data (Replace with your real data)
   const projects = [
     {
+      title: "HRMS",
+      category: "Productivity",
+      image:
+        "/hrms.png",
+      tech: ['ReactJS', 'NodeJS', 'ExpressJS', 'MongoDB', 'Tailwind CSS', 'Redux', 'JWT'],
+      description:
+        "HRMS - Human Resource Management Software- Built a full-stack Human Resource Management System (HRMS) with secure JWT authentication and role-based access for administrators and employees.",
+      links: {
+        live: "https://vexelon-hrms.vercel.app/",
+        github: "https://github.com/Karann2002/VexelonHRMS",
+      },
+    },
+    {
       title: "ShopEasy - A Ecommerce Site",
       category: "E-Commerce",
       image:
-        "https://images.unsplash.com/photo-1557821552-17105176677c?q=80&w=2664&auto=format&fit=crop", // Placeholder
+        "shopeasy.png", 
       tech: ["React.js", "Firebase", "Tailwind", "Role Based Auth"],
       description:
         "A fully functional e-commerce platform with cart management, payment gateway integration, and user authentication.",
@@ -33,30 +46,44 @@ const Projects = () => {
         github: "https://github.com/Karann2002/ShopEasy",
       },
     },
+    
     {
-      title: "Task Master",
-      category: "Productivity",
+      title: "SnapLink – Social Media Platform",
+      category: "Social",
       image:
-        "https://images.unsplash.com/photo-1540350394557-8d14678e7f91?q=80&w=2832&auto=format&fit=crop",
-      tech: ["React", "Firebase", "Framer Motion"],
+        "snaplink.png",
+      tech: ["ReactJS", "NodeJS", "ExpressJS", "MongoDB", "Tailwind CSS","Socket.io"],
       description:
-        "Real-time task management app featuring drag-and-drop kanban boards and team collaboration tools.",
+        "An SnapLink-inspired social media web application where users can sign up, log in, share posts, like, comment, follow/unfollow, and chat in real-time. Built using the MERN stack with modern UI design.",
       links: {
-        live: "#",
-        github: "#",
+        live: "snap-link-frontend-pi.vercel.app/",
+        github: "https://github.com/Karann2002/SnapLink",
       },
     },
     {
-      title: "Chatify Real-time",
-      category: "Social",
+      title: "KPZone Stays - Find Your Perfect Hostels",
+      category: "Discover",
       image:
-        "https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=2874&auto=format&fit=crop",
-      tech: ["Socket.io", "Express", "React", "Chakra UI"],
+        "kpzonestays.png",
+      tech: ["NextJS","Tailwind CSS",],
       description:
-        "Instant messaging application supporting private chats, group rooms, and media sharing.",
+        "Discover premium hostels and luxury PGs loaded with top-tier amenities, situated directly around your university campus.",
       links: {
-        live: "#",
-        github: "#",
+        live: "https://www.kpzonestays.com/",
+        github: "https://github.com/Karann2002/KPZone",
+      },
+    },
+    {
+      title: "Ritzy Junior School - Daycare and Play School ",
+      category: "Education",
+      image:
+        "ritzysch.png",
+      tech: ["HTML","JS", "CSS","Email.JS"],
+      description:
+        "Nurturing curiosity and building foundations for a lifelong love of learning. Join our community of happy explorers today.",
+      links: {
+        live: "https://ritzyjuniorschool.com/",
+        github: "https://github.com/Karann2002/RitzyJrSch",
       },
     },
   ];
